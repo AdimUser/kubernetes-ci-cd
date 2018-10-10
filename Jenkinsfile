@@ -14,11 +14,11 @@ node {
 
     stage "Build"
     
-        sh "docker build -t utpmahesh/projects:jenkinsv1 -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
+        sh "docker build -t utpmahesh/projects:hellow-kenzan -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     
     stage "Push"
 
-        sh "docker push ${imageName}"
+        sh "docker push utpmahesh/projects:hellow-kenzan"
 
     stage "Deploy"
 
